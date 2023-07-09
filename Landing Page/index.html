@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            /* nav bcz all horizontal value home services project, etc align in horizontal property that is used to create a flexible layout. 
+            It allows you to align and distribute elements horizontally or vertically within a container. */
+
+        }
+        /* ========home service about,etc start ====== */
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color:rgb(153, 153, 226);
+            font-size: 1.10rem;
+        }
+        /*==========home service about,etc end=========*/
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            margin: 110px 0;
+
+        }
+        .firstSection > div{  /* > div is for first div in firstSection */
+            width: 30%;
+        }
+        .leftSection{
+            font-size: 1.7rem;
+            width:34px;
+        }
+        .leftSection div{
+            font-size: 1.3rem;
+           
+        }
+
+        .rightSection img{
+            width: 500px;
+            height:500px;
+            margin: 8px 0;
+        }
+        /* =====================for span leftSection================== */
+        .purple{
+            color: purple;
+        }
+
+        /* span id='element' for animated word by using scripts for color*/
+        #element{                 /* #element # symbol is use because it is an id*/
+            color: purple;
+        }
+/* ======================== for line which separate .firstSection and .secondSection start=========== */
+        main hr{
+            border:0;
+            background: #9c97f1;   /*for given color to the line*/
+            height: 1.2px;
+            margin: 30px 40px;
+        }
+
+/* ======================== for line which separate .firstSection and .secondSection start=========== */
+
+/*======================================second Section for Project detail======================== */
+        .secondSection{
+            max-width: 80vw; /* vw unit use for entire screen width */
+            margin: auto;
+            height: 80vh;
+            text-align: center;
+        }
+
+        .secondSection h1{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .text-grey{
+            color: grey;  /* it is a span use in Project section  */
+        }
+
+        .fillter-buttons{
+            margin: 2rem;
+            text-align: center;
+        }
+        .fillter-buttons .btn{
+            background:none;
+            outline:none;
+            border: none;
+            cursor: pointer;
+            font-size: .85rem;
+            letter-spacing: .4px;
+            margin-left: 1.3rem;
+            color:var(--text-color);
+        }
+        .fillter-buttons .btn:hover{
+            color:rgb(153, 153, 226);
+        }
+        .project-gallery{
+            display: flex;
+            grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+            gap: 2rem;
+        }
+        .port-box{
+            flex: 1;
+            margin: 20px 20px;
+            box-shadow:0px 2px 8px 0px rbga(0,0,0,0.2)
+        }
+        .port-image img{
+        width: 70%;
+        height: auto;
+       }
+       .port-content h3{
+        margin: 15px 0px;
+        font-size: 28px;
+        color:purple ;
+        font-family: sans-serif;
+       }
+
+       .port-content p{
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0px 10px;
+        margin-bottom: 20px;
+        font-family: sans-serif;
+       }
+
+       @media screen and (max-width:768px) {
+        .project-gallery{
+            flex-direction: column;
+        }
+       }
+
+/* ===================================End of project Section============================= */
+
+/* ====================================section 2 start====================================== */
+.section2 h1{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.section2{
+    padding-left: 63px;
+    padding-right: 63px;
+}
+.boxes-flex{
+    display: flex;
+}
+
+.box{
+    margin: 12px 22px;
+    min-width: 27vw;
+    border: 2px solid white;
+    text-align: center;
+}
+
+.box ul{
+    list-style-type:none;
+}
+
+.box ul li{
+    margin :12px 2px;
+}
+
+.btn{
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 2px 3px 6px rgb(3, 3, 80),-2px -3px 6px  rgb(29, 29, 95);
+}
+
+.btn::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 15em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right,rgb(3, 3, 80) 0% ,rgb(29, 29, 95) 100%);
+    transition :.5s ease;
+    display:block;
+    z-index:-1;
+}
+
+.btn:hover::before{
+    width:10em;
+}
+
+.highlighted{
+    font: size 2em;
+    font-weight: bolder;
+}
+
+/* ============================================end of section 2=================================== */
+
+
+/* ================================================start of section 3=================================== */
+
+.section3 h1{
+    font-size: 2rem;
+    text-align: center;
+
+}
+.plantable{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 table{
+    width: 100%;
+    margin: 30px 10px;
+    border-collapse: collapse;
+}
+
+.section3 table th{
+    width: 23vw;
+    border-bottom: 2px solid white;
+    padding:15px 0;
+}
+
+.section3 table td{
+    width: 23vw;
+    border-bottom: 2px solid white;
+    text-align: center;
+
+}
+
+.section3 table tr{
+    width: 23vw;
+    border-bottom: 2px solid white;   
+} 
+
+.section3 h1{
+    font-size: 2.3rem;
+}
+
+.section3{
+    padding-left: 63px;
+    padding-right: 63px;
+}
+
+footer{
+    padding-top: 100px; 
+    text-align: center;  
+}
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">FITNESS JUNCTION</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Contact US</a></li>
+                   <li><a href="/">Join Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+   <!-- ===================firstSection for your intro and your images start================      -->
+        <section class="firstSection">
+            <div class="leftSection">
+                <span class="purple">WORKING</span> OUT 
+                <div>Landing page template</div>
+                <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h6>
+                
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+            
+            </div>
+            <div class="rightSection">
+                <img src="mc.png" alt="png">
+            </div>
+        </section>
+  <!-- ======================firstSection for your intro and your images end ====================== -->
+
+  
+<!-- =========================================== Second section start============================ -->
+
+
+  <hr>
+  <section class ='section2'>
+    <h1 class="text-center">Pricing</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui consequatur, fugiat omnis,
+     modi numquam sit commodi a illum velit impedit doloremque quia aliquam deserunt itaque exercitationem 
+     porro ipsam expedita vitae quaerat eaque!</p>
+     <div class="boxes-flex justify-center">
+        <div class="box">
+            <h2>Free</h2>
+            <ul>
+                <li class="highlighted">₹0/month</li>
+                <li>Free Training</li>
+                <li>Free Wifi</li>
+                <li>for 1 month</li>
+                <li>free diet Session</li>
+                <li><button class='btn'>Sign up</button></li>
+            </ul>
+        </div>
+       
+
+        <div class="box">
+            <h2>Pro</h2>
+            <ul>
+                <li class="highlighted">₹200/month</li>
+                <li>1 month Access to Home Club</li>
+                <li>Free Training</li>
+                <li>Protein Drink</li>
+                <li>2 guest member at time</li>
+                <li><button class='btn'>Sign up</button></li>
+            </ul>
+        </div>
+
+
+
+        <div class="box">
+            <h2>Enterprise</h2>
+            <ul>
+                <li class="highlighted">₹500/month</li>
+                <li>Unlimited Access to Home club</li>
+                <li>Free Training</li>
+                <li>Free Wifi</li>
+                <li>Bring Guest Anytime</li>
+                <li><button class='btn'>Sign up</button></li>
+            </ul>
+        </div>
+</section>
+
+<!-- ========================================end of section2============================ -->
+
+<hr>
+
+<!-- ===================================================section 3 start plantable ======================== -->
+
+<section class="section3">
+    <h1>Compare Plans </h1>
+    <div class="container plantable">
+        <table class="table text-centre">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Free</th>
+                    <th>Pro</th>
+                    <th>Enterprise</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row" >Unlimited Access to Home club </th>
+                    <td>-</td>
+                    <td>yes</td>
+                    <td>yes</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Free Fitness Training</th>
+                    <td>yes</td>
+                    <td>yes</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">Free Wifi</th>
+                    <td>yes</td>
+                    <td>yes</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">Reciprocal use of All Fitness Junction Location</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">Unlimited Guest Privileges at All Fitness Junction Location</th>
+                    <td>-</td>
+                    <td>yes</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">Unlimited use of Hydromassage</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">Unlimited use of message chair</th>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>yes</td>
+
+                </tr>
+
+                <tr>
+                    <th scope="row">1/2 Prices Cooler Drink(Restriction may apply)</th>
+                    <td>-</td>
+                    <td>yes</td>
+                    <td>yes</td>
+
+                </tr>
+
+
+                <tr>
+                    <th scope="row">20% off Reebok Product</th>
+                    <td>yes</td>
+                    <td>yes</td>
+                    <td>yes</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</section>
+
+
+    </main>
+
+    <footer>
+        Copyright &copy; Made by Prajwal Chaudhari FitJunction | All right Reserved
+    </footer>
+<!-- ====================for firstSection Script===================   start  =========== -->
+   <!-- Load library from the CDN -->
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+        <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Focus', 'Discipline','Good Food'],
+      typeSpeed: 50,
+    });
+  </script>
+<!-- =========================for firstSection Script ==================  end  ============= -->
+
+
+
+
+</body>
+
+</html>
